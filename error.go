@@ -25,13 +25,15 @@ func formatErrDflt(err error) {
 	}
 }
 
+var ErrFormatPrefix string
+
 func printErr(fileName string, line int, msg string) {
 	var s string
 
-	s += "ERROR:"
+	s += ErrFormatPrefix
 	if fileName != "" {
 		fileName = FilepathRelIfShorter(fileName)
-		s += " " + fileName + ":"
+		s += fileName + ":"
 	}
 
 	if line != -1 {
