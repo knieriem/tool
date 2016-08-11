@@ -20,7 +20,7 @@ import (
 
 var Name string
 var Title string
-var FormatErr = formatErrDflt
+var FormatErr = PrintErrExit
 
 // A Command is an implementation of a go command
 // like go build or go fix.

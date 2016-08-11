@@ -7,7 +7,7 @@ import (
 	"github.com/knieriem/text/line"
 )
 
-func formatErrDflt(err error) {
+func PrintErrExit(err error) {
 	switch err := err.(type) {
 	case *line.ErrorList:
 		for _, e := range err.List {
